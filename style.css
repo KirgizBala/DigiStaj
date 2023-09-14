@@ -5,6 +5,18 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+@keyframes circleRotating {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
 body {
   position: relative;
   display: flex;
@@ -118,6 +130,7 @@ body {
   height: 300px;
   border-radius: 50%;
   object-fit: cover;
+  animation: circleRotating 8s ease-in-out infinite 1s;
 }
 
 .full-content-shadow {
@@ -129,6 +142,7 @@ body {
   border-radius: 50%;
   z-index: 5;
   box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.4);
+  animation: circleRotating 8s ease-in-out infinite 1s;
 }
 
 .full-content-element {
